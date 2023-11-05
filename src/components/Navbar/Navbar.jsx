@@ -12,7 +12,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-[#ED1703] underline font-bold'
               : ''
           }
         >
@@ -27,7 +27,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-[#ED1703] underline font-bold'
               : ''
           }
         >
@@ -42,7 +42,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-[#ED1703] underline font-bold'
               : ''
           }
         >
@@ -56,7 +56,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-[#ED1703] underline font-bold'
               : ''
           }
         >
@@ -70,7 +70,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-[#ED1703] underline font-bold'
               : ''
           }
         >
@@ -85,7 +85,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-orange-600 underline font-bold'
+              ? 'text-[#ED1703] underline font-bold'
               : ''
           }
         >

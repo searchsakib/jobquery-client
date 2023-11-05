@@ -1,7 +1,36 @@
+import bannerImg from '/images/banner.svg';
+
 const Banner = () => {
   return (
-    <div className="max-w-screen-xl mx-auto">
-      <h2>this is banner</h2>
+    <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+      <div className="w-1/3">
+        <div>
+          <h2
+            className="text-6xl font-bold text-[#05386B] pb-5 leading-tight
+        "
+          >
+            Finding <span className="text-green-400">Jobs,</span>{' '}
+            <span className="text-green-400">Hiring</span> Talents, Effortlessly
+          </h2>
+        </div>
+        <div className="space-y-4 text-xl">
+          <p className="leading-9">
+            JobQuest makes job hunting and talent acquisition effortless. Hire
+            or find new jobs with the ultimate online marketplace.
+          </p>
+        </div>
+        <div className="flex gap-4">
+          <button className="btn bg-[#05386B] text-white hover:text-[#05386B] hover:bg-white hover:outline hover:outline-2">
+            Hire Now
+          </button>
+          <button className="btn text-[#05386B] bg-white border-[#05386B] border-2 hover:text-white hover:bg-[#05386B]">
+            Find Job
+          </button>
+        </div>
+      </div>
+      <div className="w-2/3">
+        <img src={bannerImg} alt="" />
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const BidRequests = () => {
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto">
       <Helmet>
         <title>Job Quest | Bid Requests</title>
       </Helmet>

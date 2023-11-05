@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto">
       <h2>This is Footer</h2>
     </div>
   );

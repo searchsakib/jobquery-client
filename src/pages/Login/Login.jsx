@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto">
       <Helmet>
         <title>Job Quest | Login</title>
       </Helmet>

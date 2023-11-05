@@ -109,7 +109,7 @@ const NavBar = () => {
           </div>
         </Link>
       </div>
-      <div className="dropdown bg-green-100 rounded-lg">
+      <div className="dropdown bg-white rounded-lg">
         <label tabIndex={0} className="btn btn-ghost xl:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ const NavBar = () => {
         </label>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 ml-5 z-[1] p-2 shadow  rounded-box w-52 bg-green-100"
+          className="menu menu-sm dropdown-content mt-3 ml-5 z-[1] p-2 shadow  rounded-box w-52 text-white bg-[#437cb5]"
         >
           {links}
           <div className="flex flex-col lg:flex-row items-center justify-center gap-3">

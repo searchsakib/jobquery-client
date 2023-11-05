@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import userPic from '/images/user.png';
+import logo from '/images/logo.png';
 
 const NavBar = () => {
   const links = (
@@ -95,17 +96,24 @@ const NavBar = () => {
   );
 
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row  md:px-10 lg:px-10 xl:px-0 items-center justify-between max-w-[1320px] mx-auto">
+    <div className="flex flex-col md:flex-row lg:flex-row  md:px-10 lg:px-10 xl:px-0 items-center justify-between max-w-screen-xl mx-auto">
       <div>
         <Link>
-          <h2 className="font-bold bg-orange-500 text-2xl font-serif p-[6px] text-white rounded-lg">
-            Dunno
-          </h2>
+          <div className="flex items-center justify-center">
+            <div className="w-[70px]">
+              <img src={logo} alt="" />{' '}
+            </div>
+            <div className="font-bold  text-2xl p-2 text-[#ED1703] rounded-sm">
+              JobQuest
+            </div>
+          </div>
         </Link>
       </div>
+
       <div className="text-center mt-9 md:mt-0 lg:mt-0 ">
         <ul className=" md:flex lg:flex text-lg">{links}</ul>
       </div>
+
       <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">

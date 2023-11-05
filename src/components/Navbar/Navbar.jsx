@@ -46,7 +46,7 @@ const NavBar = () => {
               : ''
           }
         >
-          My posted jobs
+          My Posted Jobs
         </NavLink>
       </li>
       <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
@@ -96,7 +96,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row  md:px-10 lg:px-10 xl:px-0 items-center justify-between max-w-screen-xl mx-auto">
+    <div className="flex flex-col md:flex-row lg:flex-row md:px-10 lg:px-10 xl:px-0 items-center justify-between max-w-screen-xl mx-auto my-10">
       <div>
         <Link>
           <div className="flex items-center justify-center">

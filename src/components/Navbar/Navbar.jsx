@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import userPic from '/images/user.png';
-import logo from '/images/logo.png';
+import logo from '/images/logo.svg';
 
 const NavBar = () => {
   const links = (
@@ -12,7 +12,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#ED1703] underline font-bold'
+              ? 'text-green-400 underline font-bold'
               : ''
           }
         >
@@ -27,7 +27,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#ED1703] underline font-bold'
+              ? 'text-green-400 underline font-bold'
               : ''
           }
         >
@@ -42,7 +42,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#ED1703] underline font-bold'
+              ? 'text-green-400 underline font-bold'
               : ''
           }
         >
@@ -56,7 +56,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#ED1703] underline font-bold'
+              ? 'text-green-400 underline font-bold'
               : ''
           }
         >
@@ -70,7 +70,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#ED1703] underline font-bold'
+              ? 'text-green-400 underline font-bold'
               : ''
           }
         >
@@ -85,7 +85,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'text-[#ED1703] underline font-bold'
+              ? 'text-green-400 underline font-bold'
               : ''
           }
         >
@@ -101,15 +101,15 @@ const NavBar = () => {
         <Link>
           <div className="flex items-center justify-center">
             <div className="flex items-center">
-              <img className="max-w-[70px]" src={logo} alt="" />{' '}
+              <img className="max-w-[70px] " src={logo} alt="" />{' '}
             </div>
-            <div className="font-bold  text-2xl p-2 text-[#ED1703] rounded-sm flex items-center">
+            <div className="font-bold  text-2xl p-2 text-white rounded-sm flex items-center">
               JobQuest
             </div>
           </div>
         </Link>
       </div>
-      <div className="dropdown bg-red-100 rounded-lg">
+      <div className="dropdown bg-green-100 rounded-lg">
         <label tabIndex={0} className="btn btn-ghost xl:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ const NavBar = () => {
         </label>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 ml-5 z-[1] p-2 shadow  rounded-box w-52 bg-red-100"
+          className="menu menu-sm dropdown-content mt-3 ml-5 z-[1] p-2 shadow  rounded-box w-52 bg-green-100"
         >
           {links}
           <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
@@ -142,7 +142,7 @@ const NavBar = () => {
 
       <div className="hidden xl:flex">
         <div className="text-center mt-9 md:mt-0 lg:mt-0 ">
-          <ul className=" md:flex lg:flex text-lg">{links}</ul>
+          <ul className=" md:flex lg:flex text-lg text-white">{links}</ul>
         </div>
       </div>
       <div className="hidden xl:flex xl:flex-row items-center justify-center gap-3">

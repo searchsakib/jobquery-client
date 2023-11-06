@@ -19,11 +19,11 @@ const Banner = () => {
             or find new jobs with the ultimate online marketplace.
           </p>
         </div>
-        <div className="flex gap-4">
-          <button className="btn bg-[#05386B] text-white hover:text-[#05386B] hover:bg-white hover:outline hover:outline-2">
+        <div className="flex gap-4 mt-5">
+          <button className="btn bg-[#05386B] text-white hover:text-[#05386B] hover:bg-green-400 hover:outline hover:outline-2">
             Hire Now
           </button>
-          <button className="btn text-[#05386B] bg-white border-[#05386B] border-2 hover:text-white hover:bg-[#05386B]">
+          <button className="btn text-[#05386B] bg-white border-[#05386B] border-2 hover:bg-green-400 hover:border-2 hover:border-[#05386B]">
             Find Job
           </button>
         </div>

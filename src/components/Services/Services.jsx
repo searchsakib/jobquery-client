@@ -15,7 +15,7 @@ const Services = () => {
       <div className="bg-[#DFF7E5]">
         <div className="container mx-auto">
           <Tabs selectedIndex={activeTab} onSelect={handleSelect} className="">
-            <TabList className="flex items-center justify-between text-lg font-semibold">
+            <TabList className="flex flex-col md:flex-row  text-lg font-semibold">
               <Tab
                 className="border-none"
                 style={{

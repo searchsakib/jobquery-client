@@ -25,8 +25,7 @@ const Services = () => {
                   width: '100%',
                   textAlign: 'center',
                   padding: '10px',
-                  outline: 'none',
-                  border:
+                  outline:
                     activeTab === 0 ? '2px solid #05386B' : '2px solid #05386B',
                   borderRadius: 0,
                   transition: 'background-color 0.3s',
@@ -43,10 +42,7 @@ const Services = () => {
                   width: '100%',
                   textAlign: 'center',
                   padding: '10px',
-                  outline: 'none',
-                  borderTop:
-                    activeTab === 1 ? '2px solid #05386B' : '2px solid #05386B',
-                  borderBottom:
+                  outline:
                     activeTab === 1 ? '2px solid #05386B' : '2px solid #05386B',
                   borderRadius: 0,
                   transition: 'background-color 0.3s',
@@ -63,8 +59,8 @@ const Services = () => {
                   width: '100%',
                   textAlign: 'center',
                   padding: '10px',
-                  outline: 'none',
-                  border:
+
+                  outline:
                     activeTab === 2 ? '2px solid #05386B' : '2px solid #05386B',
                   borderRadius: 0,
                   transition: 'background-color 0.3s',

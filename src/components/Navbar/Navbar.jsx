@@ -122,7 +122,7 @@ const NavBar = () => {
         </label>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 ml-5 z-[1] p-2 shadow  rounded-box w-52 text-white bg-[#437cb5]"
+          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 text-white bg-[#437cb5]"
         >
           {links}
           <div className="flex flex-col lg:flex-row items-center justify-center gap-3">

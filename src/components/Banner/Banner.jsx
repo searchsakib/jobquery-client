@@ -20,10 +20,10 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex gap-5 mt-5 justify-center lg:justify-normal">
-          <button className="btn bg-[#05386B] text-white hover:text-[#05386B] hover:bg-green-400 hover:outline hover:outline-2">
+          <button className="btn rounded bg-emerald-600 text-white transition hover:bg-emerald-800">
             Hire Now
           </button>
-          <button className="btn text-[#05386B] bg-white border-[#05386B] border-2 hover:bg-green-400 hover:border-2 hover:border-[#05386B]">
+          <button className="btn rounded text-emerald-600 bg-white border-emerald-600 border-2 hover:bg-emerald-700 hover:border-2 hover:border-emerald-700 hover:text-white">
             Find Job
           </button>
         </div>

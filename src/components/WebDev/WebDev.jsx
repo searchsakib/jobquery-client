@@ -8,7 +8,7 @@ const WebDev = () => {
         {/* Card start */}
         <div className="mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl p-3 lg:p-5">
           <div className="">
-            <div className="flex items-center justify-start p-4 w-24">
+            {/* <div className="flex items-center justify-start p-4 w-24">
               <svg
                 fill="#000000"
                 version="1.1"
@@ -39,7 +39,7 @@ const WebDev = () => {
                   </g>{' '}
                 </g>
               </svg>
-            </div>
+            </div> */}
             <div className="p-4">
               <div className="text-2xl text-gray-800 font-bold">Job Title</div>
               <p className="text-gray-600 text-lg mt-2">

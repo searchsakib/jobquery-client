@@ -1,0 +1,86 @@
+[
+  {
+    "category": "web",
+    "job_title": "Graphic Designer",
+    "deadline": "2023-12-18",
+    "price_range": "$400 - $600",
+    "short_description": "Design visually striking graphics for digital and print media."
+  },
+  {
+    "category": "web",
+    "job_title": "Web Developer",
+    "deadline": "2023-12-15",
+    "price_range": "$800 - $1200",
+    "short_description": "Develop responsive and interactive websites using modern technologies."
+  },
+  {
+    "category": "web",
+    "job_title": "Frontend Developer",
+    "deadline": "2023-12-20",
+    "price_range": "$700 - $1000",
+    "short_description": "Create user-friendly interfaces and optimize user experiences."
+  },
+  {
+    "category": "web",
+    "job_title": "Backend Developer",
+    "deadline": "2023-12-25",
+    "price_range": "$900 - $1500",
+    "short_description": "Build robust server-side applications and databases."
+  },
+  {
+    "category": "digital",
+    "job_title": "Social Media Manager",
+    "deadline": "2023-12-15",
+    "price_range": "$500 - $800",
+    "short_description": "Manage social media accounts and develop engaging content strategies."
+  },
+  {
+    "category": "digital",
+    "job_title": "SEO Specialist",
+    "deadline": "2023-12-20",
+    "price_range": "$600 - $900",
+    "short_description": "Improve website visibility and rankings on search engines."
+  },
+  {
+    "category": "digital",
+    "job_title": "PPC Specialist",
+    "deadline": "2023-12-25",
+    "price_range": "$700 - $1100",
+    "short_description": "Manage pay-per-click advertising campaigns to drive traffic and conversions."
+  },
+  {
+    "category": "digital",
+    "job_title": "Content Marketing Strategist",
+    "deadline": "2023-12-30",
+    "price_range": "$600 - $1000",
+    "short_description": "Develop and execute content strategies to attract and retain customers."
+  },
+  {
+    "category": "graphics",
+    "job_title": "UI/UX Designer",
+    "deadline": "2023-12-15",
+    "price_range": "$600 - $1000",
+    "short_description": "Design intuitive and visually appealing user interfaces and experiences."
+  },
+  {
+    "category": "graphics",
+    "job_title": "Logo Designer",
+    "deadline": "2023-12-20",
+    "price_range": "$300 - $500",
+    "short_description": "Create unique and memorable logos for brands and businesses."
+  },
+  {
+    "category": "graphics",
+    "job_title": "Motion Graphics Designer",
+    "deadline": "2023-12-25",
+    "price_range": "$700 - $1200",
+    "short_description": "Produce dynamic and engaging visual content for various media platforms."
+  },
+  {
+    "category": "graphics",
+    "job_title": "Print Designer",
+    "deadline": "2023-12-30",
+    "price_range": "$400 - $700",
+    "short_description": "Create designs for various print materials, including brochures, posters, and flyers."
+  }
+]

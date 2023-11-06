@@ -7,16 +7,16 @@ const TrustedCompanies = () => {
       <section className="overflow-hidden bg-[#DFF7E5] sm:grid sm:grid-cols-2">
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="mx-auto max-w-xl text-center ltr:sm:text-left">
-            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
+            <h2 className="text-2xl font-bold text-slate-800 md:text-3xl">
               Have a job that needs attention? Hiring a Expert is just a few
-              clicks away.
+              clicks away
             </h2>
 
-            <p className="hidden text-gray-500 md:mt-4 md:block">
+            <p className="hidden text-gray-600 md:mt-4 md:block">
               Hire Experts from all around the world and Get a great value for
               money while maintaining Top Class Quality. We give you the best
               opportunity to meet great talents. We Provide safe and secure
-              payment methods for buyer and seller.
+              payment methods for buyer and seller
             </p>
 
             <div className="mt-4 md:mt-8">

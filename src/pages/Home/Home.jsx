@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import Banner from '../../components/Banner/Banner';
 import Services from '../../components/Services/Services';
 import HireExperts from '../../components/HireExperts/HireExperts';
+import Career from '../../components/Career/Career';
 
 const Home = () => {
   return (
@@ -16,7 +17,9 @@ const Home = () => {
       <div className="pb-[100px]">
         <HireExperts></HireExperts>
       </div>
-      <div>{/* Some other home section here */}</div>
+      <div>
+        <Career></Career>
+      </div>
     </div>
   );
 };

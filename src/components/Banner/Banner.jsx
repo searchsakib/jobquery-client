@@ -2,11 +2,11 @@ import bannerImg from '/images/banner.svg';
 
 const Banner = () => {
   return (
-    <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+    <div className="max-w-screen-xl mx-auto flex items-center justify-between px-3 md:px-5 2xl:0">
       <div className="w-1/3">
         <div>
           <h2
-            className="text-6xl font-bold text-[#05386B] pb-5 leading-tight
+            className="text-4xl md:text-6xl font-bold text-[#05386B] pb-5 leading-tight
         "
           >
             Finding <span className="text-green-400">Jobs,</span>{' '}
@@ -29,7 +29,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="w-2/3">
-        <img src={bannerImg} alt="" />
+        <img src={bannerImg} alt="banner image" />
       </div>
     </div>
   );

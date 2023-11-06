@@ -3,7 +3,7 @@ import errorImg from '/images/error.png';
 
 const ErrorPage = () => {
   return (
-    <div className="flex items-center h-screen bg-gray-700">
+    <div className="flex items-center h-screen bg-[#05386B]">
       <div className="flex flex-col items-center justify-center px-5 mx-auto">
         <div className="max-w-md text-center">
           <div className="max-h-[330px]">
@@ -23,7 +23,7 @@ const ErrorPage = () => {
               to="/"
               rel="noopener noreferrer"
               href="#"
-              className="px-8 py-3 font-semibold rounded text-gray-700 bg-white hover:outline hover:text-white hover:bg-gray-700"
+              className="px-8 py-3 font-semibold rounded text-gray-700 bg-white hover:outline hover:text-white hover:bg-[#05386B]"
             >
               Back to homepage
             </Link>

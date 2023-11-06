@@ -24,12 +24,14 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a rel="noopener noreferrer" href="#">
-                    16, Kazi Nazrul Avenue, Mirpur,
+                    54, Nazrul Avenue,
+                    <br /> Karwan Bazar,
                   </a>
                 </li>
                 <li>
                   <a rel="noopener noreferrer" href="#">
-                    Dhaka, 1213, Bangladesh
+                    Dhaka 1215,
+                    <br /> Bangladesh
                   </a>
                 </li>
               </ul>

@@ -2,7 +2,7 @@ import bannerImg from '/images/banner.svg';
 
 const Banner = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-3 md:px-5 2xl:0 flex flex-col-reverse lg:flex-row items-center justify-between">
+    <div className="max-w-screen-xl mx-auto px-3 md:px-5 2xl:px-0 flex flex-col-reverse lg:flex-row items-center justify-between">
       <div className="lg:w-1/2 xl:w-1/3 text-center lg:text-left">
         <div>
           <h2

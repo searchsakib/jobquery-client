@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import expertOne from '/images/ex-one.jpg';
+import { motion } from 'framer-motion';
 
 const TrustedCompanies = () => {
   return (
@@ -20,12 +20,13 @@ const TrustedCompanies = () => {
             </p>
 
             <div className="mt-4 md:mt-8">
-              <Link
+              <motion.button
+                whileHover={{ scale: 1.2 }}
                 href="#"
-                className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-800 focus:outline-none focus:ring"
+                className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-800 focus:outline-none"
               >
                 Get Started Today
-              </Link>
+              </motion.button>
             </div>
           </div>
         </div>

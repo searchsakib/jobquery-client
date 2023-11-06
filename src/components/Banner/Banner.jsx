@@ -1,4 +1,5 @@
 import bannerImg from '/images/banner.svg';
+import { motion } from 'framer-motion';
 
 const Banner = () => {
   return (
@@ -20,12 +21,18 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex gap-5 mt-5 justify-center lg:justify-normal">
-          <button className="btn rounded bg-emerald-600 text-white transition hover:bg-emerald-800">
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            className="btn rounded bg-emerald-600 text-white transition hover:bg-emerald-800"
+          >
             Hire Now
-          </button>
-          <button className="btn rounded text-emerald-600 bg-white border-emerald-600 border-2 hover:bg-emerald-700 hover:border-2 hover:border-emerald-700 hover:text-white">
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            className="btn rounded text-emerald-600 bg-white border-emerald-600 border-2 hover:bg-emerald-700 hover:border-2 hover:border-emerald-700 hover:text-white"
+          >
             Find Job
-          </button>
+          </motion.button>
         </div>
       </div>
       <div className="w-full lg:w-1/2 xl:w-2/3">

@@ -20,36 +20,22 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
-              <h3 className="tracki uppercase text-gray-50 font-medium">
-                Services
-              </h3>
+              <h3 className="uppercase text-white font-medium">Address</h3>
               <ul className="space-y-2">
                 <li>
                   <a rel="noopener noreferrer" href="#">
-                    Features
+                    16, Kazi Nazrul Avenue, Mirpur,
                   </a>
                 </li>
                 <li>
                   <a rel="noopener noreferrer" href="#">
-                    Integrations
-                  </a>
-                </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    FAQ
+                    Dhaka, 1213, Bangladesh
                   </a>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="tracki uppercase text-gray-50 font-medium">
-                Company
-              </h3>
+              <h3 className="uppercase text-white font-medium">Company</h3>
               <ul className="space-y-2">
                 <li>
                   <a rel="noopener noreferrer" href="#">
@@ -61,18 +47,23 @@ const Footer = () => {
                     Terms of Service
                   </a>
                 </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Copyright Policy
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Code of Conduct
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="uppercase text-gray-50 font-medium">
+              <h3 className="uppercase text-white font-semibold">
                 Contact Info
               </h3>
               <ul className="space-y-2">
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    LY, Florida 1254.
-                  </a>
-                </li>
                 <li>
                   <a rel="noopener noreferrer" href="#">
                     +019 123 456 78
@@ -83,10 +74,15 @@ const Footer = () => {
                     info@jobquest.com
                   </a>
                 </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Hot Line: 999 555 333
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <div className="uppercase text-gray-50 font-medium">
+              <div className="uppercase text-white font-medium">
                 Social media
               </div>
               <div className="flex justify-start space-x-3">

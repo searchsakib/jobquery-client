@@ -51,20 +51,6 @@ const NavBar = () => {
       </li>
       <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
         <NavLink
-          to="/my-bids"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? 'pending'
-              : isActive
-              ? 'text-green-400 underline font-bold'
-              : ''
-          }
-        >
-          My Bids
-        </NavLink>
-      </li>
-      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
-        <NavLink
           to="/bid-requests"
           className={({ isActive, isPending }) =>
             isPending
@@ -75,6 +61,21 @@ const NavBar = () => {
           }
         >
           Bid Requests
+        </NavLink>
+      </li>
+
+      <li className="md:pr-12 lg:pr-12 pb-4 md:pb-0 lg:pb-0">
+        <NavLink
+          to="/my-bids"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? 'pending'
+              : isActive
+              ? 'text-green-400 underline font-bold'
+              : ''
+          }
+        >
+          My Bids
         </NavLink>
       </li>
 

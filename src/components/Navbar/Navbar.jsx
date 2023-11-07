@@ -153,7 +153,7 @@ const NavBar = () => {
           className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 text-white bg-[#437cb5]"
         >
           {links}
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
+          <div className="flex flex-col items-center justify-center gap-3">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 {photo ? <img src={photo} /> : <img src={userPic} />}

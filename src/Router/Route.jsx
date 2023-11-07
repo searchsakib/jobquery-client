@@ -8,6 +8,7 @@ import MyBids from '../pages/MyBids/MyBids';
 import BidRequests from '../pages/BidRequests/BidRequests';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
+import JobDetails from '../pages/JobDetails/JobDetails';
 
 const myRoute = createBrowserRouter([
   {
@@ -42,6 +43,12 @@ const myRoute = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/job-details/:id',
+        element: <JobDetails></JobDetails>,
+        loader: ({ params }) =>
+          fetch(`https://jobquest-server.vercel.app/jobs/${params.id}`),
       },
     ],
   },

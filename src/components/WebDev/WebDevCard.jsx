@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const WebDevCard = ({ job }) => {
-  const { job_title, deadline, min_price, max_price, short_description } =
+  const { _id, job_title, deadline, min_price, max_price, short_description } =
     job || {};
 
   return (
@@ -24,7 +24,7 @@ const WebDevCard = ({ job }) => {
               </p>
             </div>
             <div className="pt-5">
-              <Link>
+              <Link to={`/job-details/${_id}`}>
                 <motion.button
                   whileHover={{ scale: 1.2 }}
                   className="rounded-lg btn bg-emerald-600 text-white transition hover:bg-emerald-800 w-40 text-base"

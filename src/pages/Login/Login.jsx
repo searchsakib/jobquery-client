@@ -11,8 +11,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 // end
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
-
+  const { signIn, user } = useContext(AuthContext);
+  console.log(user);
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
@@ -26,6 +26,8 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        console.log(`This is Display Name ${user.displayName}`);
+        console.log(`This is Email ${user.email}`);
         Swal.fire({
           title: 'Login Successfull!',
           text: 'You Logged in Successfully.',

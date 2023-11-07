@@ -1,14 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 
 // strt
-import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { useContext, useState } from 'react';
-import { AuthContext } from '../../components/providers/AuthProvider';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from '@firebase/auth';
-// import { useContext, useState } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../components/providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../components/Firebase/firebase.config';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 // end
 
 const Login = () => {
@@ -80,7 +79,7 @@ const Login = () => {
             Login Here
           </h2>
           {logError && (
-            <div className="text-red-600 text-center text-xl max-w-[540px] mx-auto">
+            <div className="text-red-600 text-center text-xl max-w-[540px] mx-auto pb-10">
               <p> {logError} </p>
             </div>
           )}
@@ -133,11 +132,11 @@ const Login = () => {
               </Link>
             </div>
           </div>
-          <p className="font-medium text-center text-2xl">
-            Do not have an account?{'  '}
+          <p className="font-medium text-center text-lg">
+            Do not have an account?{'   '}
             <Link
               to="/register"
-              className="font-semibold text-[#05386B] underline"
+              className="font-semibold text-[#05386B] underline text-2xl"
             >
               Register
             </Link>{' '}

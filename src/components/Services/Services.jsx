@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import WebDev from '../WebDev/WebDev';
+import DigitalMarketing from '../DigitalMarketing/DigitalMarketing';
+import GraphicsDesign from '../GraphicsDesign/GraphicsDesign';
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -74,18 +76,10 @@ const Services = () => {
               <WebDev></WebDev>
             </TabPanel>
             <TabPanel className={`p-4 ${activeTab !== 1 ? 'hidden' : 'block'}`}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="bg-white p-4 shadow-md rounded-md">
-                  Card 2 Content
-                </div>
-              </div>
+              <DigitalMarketing></DigitalMarketing>
             </TabPanel>
             <TabPanel className={`p-4 ${activeTab !== 2 ? 'hidden' : 'block'}`}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="bg-white p-4 shadow-md rounded-md">
-                  Card 3 Content
-                </div>
-              </div>
+              <GraphicsDesign></GraphicsDesign>
             </TabPanel>
           </Tabs>
         </div>

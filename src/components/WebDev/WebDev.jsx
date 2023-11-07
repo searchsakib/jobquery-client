@@ -9,18 +9,23 @@ const WebDev = () => {
         <div className="mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl p-3 lg:p-5">
           <div className="">
             <div className="p-4">
-              <div className="text-2xl text-gray-800 font-bold">Job Title</div>
+              <div className="text-3xl text-gray-800 font-bold pb-3">
+                JS Developer frontend backend
+              </div>
               <p className="text-gray-600 text-lg mt-2">
-                Short description for the job goes here. It can be a brief
-                overview of the job requirements and responsibilities.
+                Proficient in JavaScript, responsible for developing interactive
+                and dynamic user interfaces. Collaborates with design and
+                backend teams to ensure seamless integration of JavaScript
+                functionalities, enhancing the overall performance and user
+                experience of web applications.
               </p>
               <div className="flex flex-col xl:flex-row justify-between mt-4">
                 <p className="text-slate-700 text-lg font-medium pb-2">
-                  <span className="font-semibold">Deadline:</span> 2023-12-18
+                  <span className="font-semibold">Deadline:</span> 08-02-2024
                 </p>
                 <p className="text-slate-700 text-lg font-medium">
-                  <span className="font-semibold">Price Range:</span> $400 -
-                  $600
+                  <span className="font-semibold">Price Range:</span> $1200 -
+                  $1500
                 </p>
               </div>
               <div className="pt-5">

@@ -1,47 +1,51 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import WebDevCard from './WebDevCard';
 
 const WebDev = () => {
+  const [jobs, setJobs] = useState([]);
+  const [theJob, setTheJob] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const category_tab = 'web development';
+
+  useEffect(() => {
+    fetch('https://jobquest-server.vercel.app/jobs')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('Fetched data:', data); // Check if data is fetched correctly
+        setJobs(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setIsLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    const findCategory = jobs.filter(
+      (theJob) => theJob.category === category_tab
+    );
+    console.log('Filtered products:', findCategory); // Check the filtered products
+    setTheJob(findCategory);
+  }, [jobs, category_tab]);
+
+  // const { job_title, deadline, min_price, max_price, short_description } =
+  //   job || {};
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center m-14 lg:m-[150px]">
+        <span className="loading loading-spinner loading-lg text-[#05386B]"></span>
+      </div>
+    );
+  }
+
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:p-3">
-        {/* Card start */}
-        <div className="mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl p-3 lg:p-5">
-          <div className="">
-            <div className="p-4">
-              <div className="text-3xl text-gray-800 font-bold pb-3">
-                JS Developer frontend backend
-              </div>
-              <p className="text-gray-600 text-lg mt-2">
-                Proficient in JavaScript, responsible for developing interactive
-                and dynamic user interfaces. Collaborates with design and
-                backend teams to ensure seamless integration of JavaScript
-                functionalities, enhancing the overall performance and user
-                experience of web applications.
-              </p>
-              <div className="flex flex-col xl:flex-row justify-between mt-4">
-                <p className="text-slate-700 text-lg font-medium pb-2">
-                  <span className="font-semibold">Deadline:</span> 08-02-2024
-                </p>
-                <p className="text-slate-700 text-lg font-medium">
-                  <span className="font-semibold">Price Range:</span> $1200 -
-                  $1500
-                </p>
-              </div>
-              <div className="pt-5">
-                <Link>
-                  <motion.button
-                    whileHover={{ scale: 1.2 }}
-                    className="rounded-lg btn bg-emerald-600 text-white transition hover:bg-emerald-800 w-40 text-base"
-                  >
-                    Bid Now
-                  </motion.button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Card end */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 md:p-5 lg:p-10">
+        {theJob.map((job) => (
+          <WebDevCard key={job._id} job={job} />
+        ))}
       </div>
     </div>
   );

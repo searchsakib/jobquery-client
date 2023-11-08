@@ -20,6 +20,8 @@ const JobDetails = () => {
     job_owner_email,
   } = job || {};
 
+  const isOwner = bidderEmail === job_owner_email;
+
   // from that page start
   // const handleAddProduct = async (e) => {
   //   e.preventDefault();
@@ -232,6 +234,7 @@ const JobDetails = () => {
                   type="submit"
                   className="btn btn-block  hover:bg-blue-50 border-none hover:text-[#05386B]  bg-[#05386B] text-white rounded-none"
                   value="Bid on the project"
+                  disabled={isOwner}
                 />
               </div>
             </div>

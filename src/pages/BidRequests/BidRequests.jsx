@@ -1,10 +1,23 @@
+import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../components/providers/AuthProvider';
 
 const BidRequests = () => {
-  const bidReqs = useLoaderData();
+  const { user } = useContext(AuthContext);
+  const allBidReqs = useLoaderData();
+  const [bidReqs, setBidReqs] = useState([]);
   console.log(bidReqs);
   // const { _id, price, deadline, bidder, buyer, job_title } = bidReqs || {};
+
+  useEffect(() => {
+    if (user) {
+      const filteredBidReqs = allBidReqs.filter(
+        (bidReq) => bidReq.bidder === user.email
+      );
+      setBidReqs(filteredBidReqs);
+    }
+  }, [allBidReqs, user]);
 
   return (
     <div className="max-w-screen-xl mx-auto my-20">

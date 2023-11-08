@@ -2,9 +2,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../components/providers/AuthProvider';
 
 const MyPostedJobs = () => {
+  const { user } = useContext(AuthContext);
   const myPostedJobs = useLoaderData();
   const [myJobs, setMyJobs] = useState(myPostedJobs);
 
@@ -18,6 +20,15 @@ const MyPostedJobs = () => {
   //   min_price,
   //   max_price,
   // } = myPostedJobs || {};
+
+  useEffect(() => {
+    if (user) {
+      const filteredJobs = myPostedJobs.filter(
+        (job) => job.employer_email === user.email
+      );
+      setMyJobs(filteredJobs);
+    }
+  }, [myPostedJobs, user]);
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -44,7 +55,7 @@ const MyPostedJobs = () => {
           setMyJobs(remainingJob);
           Swal.fire({
             title: 'Success!',
-            text: 'Product Deleted',
+            text: 'Job Deleted',
             icon: 'success',
             confirmButtonText: 'Okay',
           });
@@ -68,10 +79,12 @@ const MyPostedJobs = () => {
             <div className="card-body">
               <h2 className="card-title text-2xl">{myPost.job_title}</h2>
               <p>{myPost.description}</p>
-              <div className="m-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+              <div className="my-4 flex flex-col items-start justify-between gap-4 text-lg">
                 <p>
                   {' '}
-                  <span className="font-medium text-black">Email:</span>{' '}
+                  <span className="font-medium text-black">
+                    Owner Email:
+                  </span>{' '}
                   {myPost.employer_email}
                 </p>
                 <p>

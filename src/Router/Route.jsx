@@ -56,7 +56,7 @@ const myRoute = createBrowserRouter([
             <BidRequests></BidRequests>
           </PrivateRoute>
         ),
-        loader: () => fetch('https://jobquest-server.vercel.app/my-bids'),
+        loader: () => fetch('https://jobquest-server.vercel.app/bid-requests'),
       },
       {
         path: '/login',

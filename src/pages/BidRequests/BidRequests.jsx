@@ -12,7 +12,7 @@ const BidRequests = () => {
 
   useEffect(() => {
     if (user) {
-      const filteredBidReqs = allBidReqs.filter(
+      const filteredBidReqs = allBidReqs?.filter(
         (bidReq) => bidReq.bidder === user.email
       );
       setBidReqs(filteredBidReqs);

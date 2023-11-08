@@ -1,0 +1,38 @@
+[
+  {
+    "employer_email": "bhai@bhai.com",
+    "job_title": "UI Expert",
+    "description": "Proficient in JavaScript, responsible for developing interactive and dynamic user interfaces. Collaborates with design and backend teams to ensure seamless integration of JavaScript functionalities.",
+    "category": "web development",
+    "deadline": "2023-11-20",
+    "min_price": "644",
+    "max_price": "777"
+  },
+  {
+    "employer_email": "bhai@bhai.com",
+    "job_title": "Marketing Analust",
+    "description": "Manage social media accounts and develop engaging content strategies. Stay updated with the latest trends and use different analytics to optimize social media presence.",
+    "category": "digital marketing",
+    "deadline": "2023-11-20",
+    "min_price": "884",
+    "max_price": "900"
+  },
+  {
+    "employer_email": "bhai@bhai.com",
+    "job_title": "Frontend Dev",
+    "description": "Specializes in implementing visual elements that users see and interact with in a web application. Team up with back-end developers to ensure the overall design, experience and functionality.",
+    "category": "web development",
+    "deadline": "2023-11-20",
+    "min_price": "1544",
+    "max_price": "1777"
+  },
+  {
+    "employer_email": "bhai@bhai.com",
+    "job_title": "Online Salesman",
+    "description": "Develop and execute content strategies to attract and retain customers. Utilize data-driven insights to create compelling and targeted content for various digital platforms and social sites.",
+    "category": "digital marketing",
+    "deadline": "2023-11-20",
+    "min_price": "1544",
+    "max_price": "2777"
+  }
+]

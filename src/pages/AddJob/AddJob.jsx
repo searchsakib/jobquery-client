@@ -1,6 +1,61 @@
 import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../components/providers/AuthProvider';
 
 const AddJob = () => {
+  const { user } = useContext(AuthContext);
+  const employerEmail = user?.email;
+
+  const navigate = useNavigate();
+
+  // from that page start
+  const handleAddProduct = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const employer_email = form.employer_email.value;
+    const job_title = form.job_title.value;
+    const description = form.description.value;
+    const category = form.category.value;
+    const deadline = form.deadline.value;
+    const min_price = form.min_price.value;
+    const max_price = form.max_price.value;
+
+    const addJob = {
+      employer_email,
+      job_title,
+      description,
+      category,
+      deadline,
+      min_price,
+      max_price,
+    };
+    console.log(addJob);
+
+    // send data
+
+    const res = await axios.post(
+      'https://jobquest-server.vercel.app/add-job',
+      addJob
+    );
+    console.log(res.data);
+    if (res.data.insertedId) {
+      Swal.fire({
+        title: 'Success!',
+        text: 'Job Added Successfully',
+        icon: 'success',
+        confirmButtonText: 'Okay',
+      });
+      navigate('/my-posted-jobs');
+    }
+    form.reset();
+  };
+  // from that page end
+
   return (
     <div className="max-w-screen-xl mx-auto my-20 px-3 md:px-6 2xl:px-0">
       <Helmet>
@@ -11,8 +66,7 @@ const AddJob = () => {
       <div className="mx-auto max-w-xl my-20 bg-green-200 p-5 md:p-10 shadow-xl">
         <h2 className="text-center text-3xl pb-8 uppercase">Add Job</h2>
 
-        {/* onSubmit={handleBidOntheProject}  */}
-        <form className="space-y-5">
+        <form onSubmit={handleAddProduct} className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6">
             <div className="col-span-1 md:col-span-12 lg:col-span-12">
               <label
@@ -24,9 +78,9 @@ const AddJob = () => {
               <input
                 type="email"
                 className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-                // defaultValue={job_owner_email}
+                defaultValue={employerEmail}
                 readOnly
-                name="job_owner_email"
+                name="employer_email"
               />
             </div>
             <div className="col-span-1 md:col-span-12 lg:col-span-12">
@@ -56,7 +110,7 @@ const AddJob = () => {
                 type="text"
                 className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
                 placeholder="description"
-                name="short_description"
+                name="description"
                 required
               />
             </div>
@@ -67,7 +121,7 @@ const AddJob = () => {
               >
                 Category
               </label>
-              <select className="p-2 w-full" name="brand">
+              <select className="p-2 w-full" name="category">
                 <option value="web development">Web Development</option>
                 <option value="digital marketing">Digital Marketing</option>
                 <option value="graphics design">Graphics Design</option>

@@ -71,7 +71,7 @@ const Login = () => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto">
+    <div className="max-w-screen-xl mx-auto px-3 md:px-6 2xl:px-0">
       <Helmet>
         <title>Job Quest | Login</title>
       </Helmet>

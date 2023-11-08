@@ -1,110 +1,122 @@
 [
   {
+    "_id": "6549e15c31808546c20bca64",
     "category": "web development",
     "job_title": "JS Developer",
-    "deadline": "08-02-2024",
+    "deadline": "2024-02-08",
     "min_price": "500",
     "max_price": "900",
-    "short_description": "Proficient in JavaScript, responsible for developing interactive and dynamic user interfaces. Collaborates with design and backend teams to ensure seamless integration of JavaScript functionalities, enhancing the overall performance and user experience of web applications.",
+    "short_description": "Proficient in JavaScript, responsible for developing interactive and dynamic user interfaces. Collaborates with design and backend teams to ensure seamless integration of JavaScript functionalities.",
     "job_owner_email": "john@webdevco.com"
   },
   {
+    "_id": "6549e15c31808546c20bca65",
     "category": "web development",
     "job_title": "Frontend Developer",
-    "deadline": "05-01-2024",
+    "deadline": "2024-01-05",
     "min_price": "700",
     "max_price": "1100",
-    "short_description": "Specializes in implementing visual elements that users see and interact with in a web application. Collaborates with back-end developers to ensure the effectiveness of the overall design and functionality.",
+    "short_description": "Specializes in implementing visual elements that users see and interact with in a web application. Team up with back-end developers to ensure the overall design, experience and functionality.",
     "job_owner_email": "latham@designsol.com"
   },
   {
+    "_id": "6549e15c31808546c20bca66",
     "category": "web development",
     "job_title": "Web Development Manager",
-    "deadline": "15-11-2023",
+    "deadline": "2023-11-15",
     "min_price": "1000",
     "max_price": "1500",
-    "short_description": "Responsible for overseeing the planning, execution, and delivery of web development projects. Manages and leads a team of developers, ensuring the timely delivery of high-quality web solutions. Coordinates with stakeholders to define project requirements and milestones.",
+    "short_description": "Responsible for overseeing the planning, execution, and delivery of web development projects. Manages and leads a team of developers, ensuring the timely delivery of high-quality web solutions.",
     "job_owner_email": "james@codecrew.com"
   },
   {
+    "_id": "6549e15c31808546c20bca67",
     "category": "web development",
     "job_title": "Full Stack Developer",
-    "deadline": "25-01-2024",
+    "deadline": "2024-01-25",
     "min_price": "800",
     "max_price": "1200",
     "short_description": "Proficient in both front-end and back-end development, responsible for designing user interactions on websites, developing servers, and databases for website functionality.",
     "job_owner_email": "peter@techsol.com"
   },
   {
+    "_id": "6549e15c31808546c20bca68",
     "category": "digital marketing",
     "job_title": "Social Media Manager",
-    "deadline": "25-02-2024",
+    "deadline": "2024-07-25",
     "min_price": "500",
     "max_price": "800",
-    "short_description": "Manage social media accounts and develop engaging content strategies. Stay updated with the latest trends and use analytics to optimize social media presence.",
+    "short_description": "Manage social media accounts and develop engaging content strategies. Stay updated with the latest trends and use different analytics to optimize social media presence.",
     "job_owner_email": "alvez@digitizeco.com"
   },
   {
+    "_id": "6549e15c31808546c20bca69",
     "category": "digital marketing",
     "job_title": "SEO Specialist",
-    "deadline": "19-11-2023",
+    "deadline": "2023-11-19",
     "min_price": "600",
     "max_price": "900",
-    "short_description": "Improve website visibility and rankings on search engines. Conduct regular keyword research and analysis to identify opportunities for optimization.",
+    "short_description": "Improve website visibility and rankings on search engines. Conduct regular keyword research and analysis to identify opportunities and implement changes for optimization.",
     "job_owner_email": "william@marketboost.com"
   },
   {
+    "_id": "6549e15c31808546c20bca6a",
     "category": "digital marketing",
     "job_title": "Email Marketing Specialist",
-    "deadline": "17-01-2024",
+    "deadline": "2024-01-17",
     "min_price": "600",
     "max_price": "1000",
     "short_description": "Develop and execute effective email marketing campaigns to engage and nurture leads. Analyze campaign performance and implement strategies to increase open and click-through rates.",
     "job_owner_email": "george@advertech.com"
   },
   {
+    "_id": "6549e15c31808546c20bca6b",
     "category": "digital marketing",
     "job_title": "Content Marketing Strategist",
-    "deadline": "09-12-2023",
+    "deadline": "2023-05-09",
     "min_price": "600",
     "max_price": "1000",
-    "short_description": "Develop and execute content strategies to attract and retain customers. Utilize data-driven insights to create compelling and targeted content for various digital platforms.",
+    "short_description": "Develop and execute content strategies to attract and retain customers. Utilize data-driven insights to create compelling and targeted content for various digital platforms and social sites.",
     "job_owner_email": "robert@promotecorp.com"
   },
   {
+    "_id": "6549e15c31808546c20bca6c",
     "category": "graphics design",
     "job_title": "UI/UX Designer",
-    "deadline": "22-12-2023",
+    "deadline": "2023-12-22",
     "min_price": "800",
     "max_price": "1200",
     "short_description": "Design intuitive and visually appealing user interfaces and experiences. Implement user-centric design principles and conduct user research to create highly functional and aesthetically pleasing interfaces.",
     "job_owner_email": "jason@creativeminds.com"
   },
   {
+    "_id": "6549e15c31808546c20bca6d",
     "category": "graphics design",
     "job_title": "Logo Designer",
-    "deadline": "13-12-2023",
+    "deadline": "2023-12-13",
     "min_price": "400",
     "max_price": "600",
     "short_description": "Create unique and memorable logos for brands and businesses. Develop brand identities that communicate the essence and values of the company or product, ensuring a lasting impact.",
     "job_owner_email": "richard@brandvision.com"
   },
   {
+    "_id": "6549e15c31808546c20bca6e",
     "category": "graphics design",
     "job_title": "Motion Graphics Designer",
-    "deadline": "25-01-2024",
+    "deadline": "2024-01-25",
     "min_price": "900",
     "max_price": "1500",
     "short_description": "Produce dynamic and engaging visual content for various media platforms. Utilize cutting-edge software and techniques to create captivating motion graphics that enhance storytelling and brand messaging.",
     "job_owner_email": "anderson@visualworks.com"
   },
   {
+    "_id": "6549e15c31808546c20bca6f",
     "category": "graphics design",
     "job_title": "Print Designer",
-    "deadline": "03-12-2023",
+    "deadline": "2023-12-03",
     "min_price": "500",
     "max_price": "900",
-    "short_description": "Create designs for various print materials, including brochures, posters, and flyers. Coordinate with clients and printers to ensure that the design vision is effectively translated onto physical mediums, maintaining quality and consistency.",
+    "short_description": "Create designs for various print materials, including brochures, posters, and flyers. Coordinate with clients and printers to ensure that the design vision is effectively translated onto physical mediums.",
     "job_owner_email": "thomas@printmedia.com"
   }
 ]

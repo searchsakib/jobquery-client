@@ -102,7 +102,7 @@ const MyPostedJobs = () => {
                 <Link>
                   <button
                     onClick={() => handleDelete(myPost._id)}
-                    className="btn bg-[#2161a2] hover:bg-[#1b4978] text-white"
+                    className="btn bg-[#d33] hover:bg-[#ac2828] text-white"
                   >
                     Delete
                   </button>

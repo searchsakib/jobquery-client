@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/providers/AuthProvider';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -21,6 +21,8 @@ const JobDetails = () => {
   } = job || {};
 
   const isOwner = bidderEmail === job_owner_email;
+
+  const navigate = useNavigate();
 
   // from that page start
   const handleBidOntheProject = async (e) => {
@@ -55,6 +57,7 @@ const JobDetails = () => {
         icon: 'success',
         confirmButtonText: 'Okay',
       });
+      navigate('/my-bids');
     }
     form.reset();
   };

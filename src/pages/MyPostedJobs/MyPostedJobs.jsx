@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const MyPostedJobs = () => {
   const myPostedJobs = useLoaderData();
@@ -22,7 +22,10 @@ const MyPostedJobs = () => {
       {/* card start  */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:p-5 lg:p-10">
         {myPostedJobs.map((myPost) => (
-          <div className="card shadow-xl mx-3 md:mx-6 2xl:mx-0 bg-green-200">
+          <div
+            key={myPost._id}
+            className="card shadow-xl mx-3 md:mx-6 2xl:mx-0 bg-green-200"
+          >
             <div className="card-body">
               <h2 className="card-title text-2xl">{myPost.job_title}</h2>
               <p>{myPost.description}</p>
@@ -51,12 +54,17 @@ const MyPostedJobs = () => {
                 </p>
               </div>
               <div className="card-actions justify-evenly">
-                <button className="btn bg-[#2161a2] hover:bg-[#1b4978] text-white">
-                  Update
-                </button>
-                <button className="btn bg-[#2161a2] hover:bg-[#1b4978] text-white">
-                  Delete
-                </button>
+                <Link to={`/update-job/${myPost._id}`}>
+                  <button className="btn bg-[#2161a2] hover:bg-[#1b4978] text-white">
+                    Update
+                  </button>
+                </Link>
+                {/* to={`/delete-job/${myPost._id}`} */}
+                <Link>
+                  <button className="btn bg-[#2161a2] hover:bg-[#1b4978] text-white">
+                    Delete
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

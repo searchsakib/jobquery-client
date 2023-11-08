@@ -86,7 +86,7 @@ const Register = () => {
 
           <form
             onSubmit={handleRegister}
-            className="card-body shadow-none md:shadow-xl rounded-none md:rounded-xl bg-[#DFF7E5]"
+            className="card-body shadow-none md:shadow-xl rounded-none bg-green-200"
           >
             <div className="form-control">
               <label className="label">
@@ -96,7 +96,7 @@ const Register = () => {
                 type="text"
                 placeholder="name"
                 name="name"
-                className="input input-bordered"
+                className="input input-bordered rounded-none"
                 required
               />
             </div>
@@ -110,7 +110,7 @@ const Register = () => {
                 type="text"
                 placeholder="Photo URL"
                 name="photo"
-                className="input input-bordered"
+                className="input input-bordered rounded-none"
                 required
               />
             </div>
@@ -122,7 +122,7 @@ const Register = () => {
                 type="email"
                 placeholder="email"
                 name="email"
-                className="input input-bordered"
+                className="input input-bordered rounded-none"
                 required
               />
             </div>
@@ -134,12 +134,12 @@ const Register = () => {
                 type="password"
                 placeholder="password"
                 name="password"
-                className="input input-bordered"
+                className="input input-bordered rounded-none"
                 required
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#05386B] text-white hover:text-[#05386B]  hover:bg-blue-50 hover:border-2 hover:border-[#05386B]">
+              <button className="btn bg-[#05386B] text-white hover:text-[#05386B]  hover:bg-blue-50 hover:border-2 hover:border-[#05386B] rounded-none">
                 Register
               </button>
             </div>

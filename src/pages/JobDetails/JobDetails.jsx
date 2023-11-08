@@ -1,11 +1,73 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../components/providers/AuthProvider';
+// import Swal from 'sweetalert2';
+// import axios from 'axios';
 
 const JobDetails = () => {
+  const { user } = useContext(AuthContext);
+  const bidderEmail = user?.email;
+
   const job = useLoaderData();
-  const { _id, job_title, deadline, min_price, max_price, short_description } =
-    job || {};
+  const {
+    _id,
+    job_title,
+    deadline,
+    min_price,
+    max_price,
+    short_description,
+    job_owner_email,
+  } = job || {};
+
+  // from that page start
+  // const handleAddProduct = async (e) => {
+  //   e.preventDefault();
+
+  //   const form = e.target;
+
+  //   const name = form.name.value;
+  //   const brand = form.brand.value.toLowerCase();
+  //   const type = form.type.value;
+  //   const price = form.price.value;
+  //   const description = form.description.value;
+  //   const rating = form.rating.value;
+  //   const image = form.image.value;
+
+  //   const newProduct = {
+  //     name,
+  //     brand,
+  //     type,
+  //     price,
+  //     description,
+  //     rating,
+  //     image,
+  //   };
+  //   console.log(newProduct);
+
+  //   // send data
+
+  //   const res = await axios.post(
+  //     'https://technest-server.vercel.app/products',
+  //     newProduct,
+  //     {
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     }
+  //   );
+  //   console.log(res.data);
+  //   if (res.data.insertedId) {
+  //     Swal.fire({
+  //       title: 'Success!',
+  //       text: 'Product Added Successfully',
+  //       icon: 'success',
+  //       confirmButtonText: 'Okay',
+  //     });
+  //   }
+  //   form.reset();
+  // };
+  // from that page end
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,7 +90,7 @@ const JobDetails = () => {
       <Helmet>
         <title>Job Quest | Job Details</title>
       </Helmet>
-      <div className="rounded-xl bg-white p-4 ring ring-[#a1cdf9] sm:p-6 lg:p-8 shadow-xl ">
+      <div className=" bg-white p-4 ring ring-[#a1cdf9] sm:p-6 lg:p-8 shadow-xl ">
         <div className="flex items-start sm:gap-8">
           {/* <div
             className="hidden sm:grid sm:h-20 sm:w-20 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:border-indigo-500"
@@ -96,6 +158,86 @@ const JobDetails = () => {
             </div>
           </div>
         </div>
+
+        {/* form start */}
+        <div className="mx-auto max-w-xl my-20 bg-green-200 p-5 md:p-10 shadow-xl">
+          <h2 className="text-center text-3xl pb-8">Place Your Bid</h2>
+          {/* onSubmit={handleAddProduct} */}
+          <form className="space-y-5">
+            <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6">
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
+                <label
+                  htmlFor="example7"
+                  className="mb-1 block text-sm font-medium text-gray-700"
+                >
+                  Price
+                </label>
+                <input
+                  type="number"
+                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+                  placeholder="Your Bidding Amount"
+                  name="price"
+                  required
+                />
+              </div>
+
+              <div className="col-span-1 md:col-span-6 lg:col-span-6">
+                <label
+                  htmlFor="example7"
+                  className="mb-1 block text-sm font-medium text-gray-700"
+                >
+                  Deadline
+                </label>
+                <input
+                  type="date"
+                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+                  name="date"
+                  required
+                />
+              </div>
+
+              <div className="col-span-1 md:col-span-12 lg:col-span-12">
+                <label
+                  htmlFor="example7"
+                  className="mb-1 block text-sm font-medium text-gray-700"
+                >
+                  Bidder Email
+                </label>
+                <input
+                  type="email"
+                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+                  defaultValue={bidderEmail}
+                  readOnly
+                  name="bidderEmail"
+                />
+              </div>
+              <div className="col-span-1 md:col-span-12 lg:col-span-12">
+                <label
+                  htmlFor="example7"
+                  className="mb-1 block text-sm font-medium text-gray-700"
+                >
+                  Buyer Email
+                </label>
+                <input
+                  type="email"
+                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+                  defaultValue={job_owner_email}
+                  readOnly
+                  name="buyerEmail"
+                />
+              </div>
+
+              <div className="col-span-1 md:col-span-12 lg:col-span-12">
+                <input
+                  type="submit"
+                  className="btn btn-block  hover:bg-blue-50 border-none hover:text-[#05386B]  bg-[#05386B] text-white rounded-none"
+                  value="Bid on the project"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        {/* form end */}
       </div>
     </div>
   );

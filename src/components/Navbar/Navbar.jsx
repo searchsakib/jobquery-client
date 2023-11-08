@@ -164,13 +164,13 @@ const NavBar = () => {
             {user ? (
               <button
                 onClick={handleSignOut}
-                className="btn bg-gray-100 hover:bg-sky-200 text-black outline-none border-none"
+                className="btn bg-gray-100 rounded-none hover:bg-sky-200 text-black outline-none border-none"
               >
                 Log Out
               </button>
             ) : (
               <Link to="/login">
-                <button className="btn bg-gray-100 hover:bg-sky-200 text-black outline-none border-none">
+                <button className="btn bg-gray-100 rounded-none hover:bg-sky-200 text-black outline-none border-none">
                   Login
                 </button>
               </Link>
@@ -196,13 +196,13 @@ const NavBar = () => {
         {user ? (
           <button
             onClick={handleSignOut}
-            className="btn bg-gray-100 hover:bg-sky-200 text-black outline-none border-none"
+            className="btn bg-gray-100 hover:bg-sky-200 text-black outline-none border-none rounded-none"
           >
             Log Out
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn bg-gray-100 hover:bg-sky-200 text-black outline-none border-none">
+            <button className="btn bg-gray-100 hover:bg-sky-200 text-black outline-none border-none rounded-none">
               Login
             </button>
           </Link>

@@ -36,6 +36,7 @@ const JobDetails = () => {
     const buyer = form.buyerEmail.value;
 
     const newBid = {
+      job_title,
       price,
       deadline,
       bidder,
@@ -88,10 +89,7 @@ const JobDetails = () => {
         <div className="flex items-start sm:gap-8">
           <div>
             <h3 className="mt-4 text-lg font-medium sm:text-xl pb-2">
-              <span className="hover:underline cursor-pointer text-2xl font-semibold">
-                {' '}
-                {job_title}{' '}
-              </span>
+              <span className="text-2xl font-semibold"> {job_title} </span>
             </h3>
 
             <p className="mt-1 text-lg">{short_description}</p>

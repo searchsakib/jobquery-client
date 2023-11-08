@@ -10,6 +10,7 @@ import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import JobDetails from '../pages/JobDetails/JobDetails';
 import UpdateJob from '../pages/UpdateJob/UpdateJob';
+import PrivateRoute from './PrivateRoute';
 
 const myRoute = createBrowserRouter([
   {
@@ -23,22 +24,38 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/add-job',
-        element: <AddJob></AddJob>,
+        element: (
+          <PrivateRoute>
+            <AddJob></AddJob>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/my-posted-jobs',
-        element: <MyPostedJobs></MyPostedJobs>,
+        element: (
+          <PrivateRoute>
+            <MyPostedJobs></MyPostedJobs>
+          </PrivateRoute>
+        ),
         loader: () =>
           fetch('https://jobquest-server.vercel.app/my-posted-jobs'),
       },
       {
         path: '/my-bids',
-        element: <MyBids></MyBids>,
+        element: (
+          <PrivateRoute>
+            <MyBids></MyBids>
+          </PrivateRoute>
+        ),
         loader: () => fetch('https://jobquest-server.vercel.app/my-bids'),
       },
       {
         path: '/bid-requests',
-        element: <BidRequests></BidRequests>,
+        element: (
+          <PrivateRoute>
+            <BidRequests></BidRequests>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/login',
@@ -50,7 +67,11 @@ const myRoute = createBrowserRouter([
       },
       {
         path: '/job-details/:id',
-        element: <JobDetails></JobDetails>,
+        element: (
+          <PrivateRoute>
+            <JobDetails></JobDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://jobquest-server.vercel.app/jobs/${params.id}`),
       },

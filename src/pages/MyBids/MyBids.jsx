@@ -33,7 +33,7 @@ const MyBids = () => {
             </tr>
           </thead>
           {myBids.map((myBid) => (
-            <tbody className="divide-y divide-gray-200">
+            <tbody key={myBid._id} className="divide-y divide-gray-200">
               <tr>
                 <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-base">
                   {myBid.job_title}

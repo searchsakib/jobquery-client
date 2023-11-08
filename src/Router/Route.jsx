@@ -31,6 +31,7 @@ const myRoute = createBrowserRouter([
       {
         path: '/my-bids',
         element: <MyBids></MyBids>,
+        loader: () => fetch('https://jobquest-server.vercel.app/my-bids'),
       },
       {
         path: '/bid-requests',

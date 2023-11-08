@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../components/providers/AuthProvider';
-// import Swal from 'sweetalert2';
-// import axios from 'axios';
+import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const JobDetails = () => {
   const { user } = useContext(AuthContext);
@@ -23,52 +23,41 @@ const JobDetails = () => {
   const isOwner = bidderEmail === job_owner_email;
 
   // from that page start
-  // const handleAddProduct = async (e) => {
-  //   e.preventDefault();
+  const handleBidOntheProject = async (e) => {
+    e.preventDefault();
 
-  //   const form = e.target;
+    const form = e.target;
 
-  //   const name = form.name.value;
-  //   const brand = form.brand.value.toLowerCase();
-  //   const type = form.type.value;
-  //   const price = form.price.value;
-  //   const description = form.description.value;
-  //   const rating = form.rating.value;
-  //   const image = form.image.value;
+    const price = form.price.value;
+    const deadline = form.date.value;
+    const bidder = form.bidderEmail.value;
+    const buyer = form.buyerEmail.value;
 
-  //   const newProduct = {
-  //     name,
-  //     brand,
-  //     type,
-  //     price,
-  //     description,
-  //     rating,
-  //     image,
-  //   };
-  //   console.log(newProduct);
+    const newBid = {
+      price,
+      deadline,
+      bidder,
+      buyer,
+    };
+    console.log(newBid);
 
-  //   // send data
+    // send data
 
-  //   const res = await axios.post(
-  //     'https://technest-server.vercel.app/products',
-  //     newProduct,
-  //     {
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //     }
-  //   );
-  //   console.log(res.data);
-  //   if (res.data.insertedId) {
-  //     Swal.fire({
-  //       title: 'Success!',
-  //       text: 'Product Added Successfully',
-  //       icon: 'success',
-  //       confirmButtonText: 'Okay',
-  //     });
-  //   }
-  //   form.reset();
-  // };
+    const res = await axios.post(
+      'https://jobquest-server.vercel.app/my-bids',
+      newBid
+    );
+    console.log(res.data);
+    if (res.data.insertedId) {
+      Swal.fire({
+        title: 'Success!',
+        text: 'Bid Added Successfully',
+        icon: 'success',
+        confirmButtonText: 'Okay',
+      });
+    }
+    form.reset();
+  };
   // from that page end
 
   const [isLoading, setIsLoading] = useState(true);
@@ -94,24 +83,7 @@ const JobDetails = () => {
       </Helmet>
       <div className=" bg-white p-4 ring ring-[#a1cdf9] sm:p-6 lg:p-8 shadow-xl ">
         <div className="flex items-start sm:gap-8">
-          {/* <div
-            className="hidden sm:grid sm:h-20 sm:w-20 sm:shrink-0 sm:place-content-center sm:rounded-full sm:border-2 sm:border-indigo-500"
-            aria-hidden="true"
-          >
-            <div className="flex items-center gap-1">
-              <span className="h-8 w-0.5 rounded-full bg-indigo-500"></span>
-              <span className="h-6 w-0.5 rounded-full bg-indigo-500"></span>
-              <span className="h-4 w-0.5 rounded-full bg-indigo-500"></span>
-              <span className="h-6 w-0.5 rounded-full bg-indigo-500"></span>
-              <span className="h-8 w-0.5 rounded-full bg-indigo-500"></span>
-            </div>
-          </div> */}
-
           <div>
-            {/* <strong className="rounded border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Episode #101
-            </strong> */}
-
             <h3 className="mt-4 text-lg font-medium sm:text-xl pb-2">
               <span className="hover:underline cursor-pointer text-2xl font-semibold">
                 {' '}
@@ -164,8 +136,8 @@ const JobDetails = () => {
         {/* form start */}
         <div className="mx-auto max-w-xl my-20 bg-green-200 p-5 md:p-10 shadow-xl">
           <h2 className="text-center text-3xl pb-8">Place Your Bid</h2>
-          {/* onSubmit={handleAddProduct} */}
-          <form className="space-y-5">
+
+          <form onSubmit={handleBidOntheProject} className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6">
               <div className="col-span-1 md:col-span-6 lg:col-span-6">
                 <label

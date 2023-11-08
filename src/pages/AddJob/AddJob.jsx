@@ -12,7 +12,7 @@ const AddJob = () => {
   const navigate = useNavigate();
 
   // from that page start
-  const handleAddProduct = async (e) => {
+  const handleAddJob = async (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -62,11 +62,11 @@ const AddJob = () => {
         <title>Job Quest | Add Job</title>
       </Helmet>
 
-      {/* form start */}
+      {/*add job form start */}
       <div className="mx-auto max-w-xl my-20 bg-green-200 p-5 md:p-10 shadow-xl">
         <h2 className="text-center text-3xl pb-8 uppercase">Add Job</h2>
 
-        <form onSubmit={handleAddProduct} className="space-y-5">
+        <form onSubmit={handleAddJob} className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6">
             <div className="col-span-1 md:col-span-12 lg:col-span-12">
               <label
@@ -186,7 +186,7 @@ const AddJob = () => {
           </div>
         </form>
       </div>
-      {/* form end */}
+      {/* add job form end */}
     </div>
   );
 };

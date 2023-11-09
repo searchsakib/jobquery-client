@@ -50,6 +50,10 @@ const JobDetails = () => {
       'https://jobquest-server.vercel.app/my-bids',
       newBid
     );
+    const resTwo = await axios.post(
+      'https://jobquest-server.vercel.app/bid-reqs',
+      newBid
+    );
     console.log(res.data);
     if (res.data.insertedId) {
       Swal.fire({

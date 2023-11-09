@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../components/providers/AuthProvider';
 
 const MyBids = () => {
@@ -10,6 +10,14 @@ const MyBids = () => {
   const allBids = useLoaderData();
   const [myBids, setMyBids] = useState([]);
   const { _id, price, deadline, bidder, buyer, job_title } = myBids || {};
+
+  const [completed, setCompleted] = useState('pending');
+  const [displayBtn, setDisplayBtn] = useState('inline-block');
+
+  const handleComplete = (id) => {
+    setDisplayBtn('hidden');
+    setCompleted('completed');
+  };
 
   useEffect(() => {
     if (user) {
@@ -58,15 +66,15 @@ const MyBids = () => {
                   {myBid.deadline}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700 text-base">
-                  pending
+                  {completed}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2">
-                  <a
-                    href="#"
-                    className="uppercase inline-block rounded bg-[#2161a2] px-4 py-2 text-sm font-medium text-white hover:bg-[#1b4978]"
+                  <Link
+                    onClick={() => handleComplete()}
+                    className={`uppercase ${displayBtn} rounded bg-[#2161a2] px-4 py-2 text-sm font-medium text-white hover:bg-[#1b4978]`}
                   >
                     Complete
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>

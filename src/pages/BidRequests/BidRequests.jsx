@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../components/providers/AuthProvider';
 
 const BidRequests = () => {
@@ -9,6 +9,19 @@ const BidRequests = () => {
   const [bidReqs, setBidReqs] = useState([]);
   console.log(bidReqs);
   // const { _id, price, deadline, bidder, buyer, job_title } = bidReqs || {};
+
+  const [rejected, setRejected] = useState('pending');
+  const [accepted, setAccepted] = useState('pending');
+  const [displayBtn, setDisplayBtn] = useState('inline-block');
+
+  const handleReject = (id) => {
+    setDisplayBtn('hidden');
+    setRejected('rejected');
+  };
+  const handleAccept = (id) => {
+    setDisplayBtn('hidden');
+    setAccepted('accepted');
+  };
 
   useEffect(() => {
     if (user) {
@@ -65,23 +78,23 @@ const BidRequests = () => {
                   {bidReq.price}$
                 </td>
                 <td className="whitespace-nowrap px-4 py-2 text-gray-700 text-base">
-                  pending
+                  {rejected}
                 </td>
                 <td className="whitespace-nowrap px-4 py-2">
-                  <a
-                    href="#"
-                    className="uppercase inline-block rounded bg-[#2161a2] px-4 py-2 text-sm font-medium text-white hover:bg-[#1b4978]"
+                  <Link
+                    onClick={() => handleAccept(bidReq._id)}
+                    className={`uppercase ${displayBtn} inline-block rounded bg-[#2161a2] px-4 py-2 text-sm font-medium text-white hover:bg-[#1b4978]`}
                   >
                     Accept
-                  </a>
+                  </Link>
                 </td>
                 <td className="whitespace-nowrap px-4 py-2">
-                  <a
-                    href="#"
-                    className="uppercase inline-block rounded bg-[#d33] px-4 py-2 text-sm font-medium text-white hover:bg-[#ac2828]"
+                  <Link
+                    onClick={() => handleReject(bidReq._id)}
+                    className={`uppercase ${displayBtn} rounded bg-[#d33] px-4 py-2 text-sm font-medium text-white hover:bg-[#ac2828]`}
                   >
                     Reject
-                  </a>
+                  </Link>
                 </td>
               </tr>
             </tbody>

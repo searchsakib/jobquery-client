@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const GraphicsDesignCard = ({ job }) => {
-  const { _id, job_title, deadline, min_price, max_price, short_description } =
+  const { _id, job_title, deadline, min_price, max_price, description } =
     job || {};
 
   return (
@@ -13,7 +13,7 @@ const GraphicsDesignCard = ({ job }) => {
             <div className="text-3xl text-gray-800 font-bold pb-3">
               {job_title}
             </div>
-            <p className="text-gray-600 text-lg mt-2">{short_description}</p>
+            <p className="text-gray-600 text-lg mt-2">{description}</p>
             <div className="flex flex-col xl:flex-row justify-between mt-4">
               <p className="text-slate-700 text-lg font-medium pb-2">
                 <span className="font-semibold">Deadline:</span> {deadline}

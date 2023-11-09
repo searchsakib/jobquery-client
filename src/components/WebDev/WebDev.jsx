@@ -29,7 +29,7 @@ const WebDev = () => {
     setTheJob(findCategory);
   }, [jobs, category_tab]);
 
-  // const { job_title, deadline, min_price, max_price, short_description } =
+  // const { job_title, deadline, min_price, max_price, description } =
   //   job || {};
 
   if (isLoading) {

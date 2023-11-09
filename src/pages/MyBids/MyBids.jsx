@@ -13,10 +13,11 @@ const MyBids = () => {
 
   useEffect(() => {
     if (user) {
-      const filteredBids = allBids.filter((bid) => bid.bidder === user.email);
+      const filteredBids = allBids?.filter((bid) => bid.bidder === user.email);
       setMyBids(filteredBids);
     }
   }, [allBids, user]);
+  // console.log(allBids);
 
   return (
     <div className="max-w-screen-xl mx-auto my-20">
@@ -33,7 +34,7 @@ const MyBids = () => {
                 Job Title
               </th>
               <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-lg">
-                Email
+                Buyer Email
               </th>
               <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-lg">
                 Deadline

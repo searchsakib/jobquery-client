@@ -83,7 +83,7 @@ const MyPostedJobs = () => {
                 <p>
                   {' '}
                   <span className="font-medium text-black">
-                    Owner Email:
+                    Employer Email:
                   </span>{' '}
                   {myPost.employer_email}
                 </p>

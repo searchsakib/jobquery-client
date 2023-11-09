@@ -16,11 +16,11 @@ const JobDetails = () => {
     deadline,
     min_price,
     max_price,
-    short_description,
-    job_owner_email,
+    description,
+    employer_email,
   } = job || {};
 
-  const isOwner = bidderEmail === job_owner_email;
+  const isOwner = bidderEmail === employer_email;
 
   const navigate = useNavigate();
 
@@ -92,7 +92,7 @@ const JobDetails = () => {
               <span className="text-2xl font-semibold"> {job_title} </span>
             </h3>
 
-            <p className="mt-1 text-lg">{short_description}</p>
+            <p className="mt-1 text-lg">{description}</p>
 
             <div className="mt-4 sm:flex sm:items-center sm:gap-2">
               <div className="flex items-center gap-1 text-gray-500">
@@ -180,7 +180,7 @@ const JobDetails = () => {
                 </label>
                 <input
                   type="email"
-                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500 cursor-not-allowed"
                   defaultValue={bidderEmail}
                   readOnly
                   name="bidderEmail"
@@ -195,8 +195,8 @@ const JobDetails = () => {
                 </label>
                 <input
                   type="email"
-                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-                  defaultValue={job_owner_email}
+                  className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500 cursor-not-allowed"
+                  defaultValue={employer_email}
                   readOnly
                   name="buyerEmail"
                 />

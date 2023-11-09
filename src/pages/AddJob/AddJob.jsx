@@ -77,7 +77,7 @@ const AddJob = () => {
               </label>
               <input
                 type="email"
-                className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
+                className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500 cursor-not-allowed"
                 defaultValue={employerEmail}
                 readOnly
                 name="employer_email"
@@ -93,7 +93,6 @@ const AddJob = () => {
               <input
                 type="text"
                 className="block w-full p-2 border-gray-300 shadow-sm focus:border-primary-400 focus:ring focus:ring-primary-200 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-500"
-                // defaultValue={job_owner_email}
                 placeholder="job title"
                 required
                 name="job_title"
@@ -180,7 +179,6 @@ const AddJob = () => {
                 type="submit"
                 className="btn btn-block  hover:bg-blue-50 border-none hover:text-[#05386B]  bg-[#05386B] text-white rounded-none"
                 value="Add Job"
-                // disabled={isOwner}
               />
             </div>
           </div>

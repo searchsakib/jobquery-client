@@ -35,7 +35,9 @@ const MyBids = () => {
 
       {myBids?.length > 0 ? (
         <div className="overflow-x-auto">
-          <h2 className="text-center text-3xl font-medium pb-14">My Bids</h2>
+          <h2 className="text-center text-3xl font-medium pt-8 pb-14">
+            My Bids
+          </h2>
           <table className="divide-y-2 divide-gray-200 bg-white text-sm mx-auto w-8/12 min-w-fit ">
             <thead className="text-left">
               <tr>

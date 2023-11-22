@@ -156,7 +156,11 @@ const NavBar = () => {
           <div className="flex flex-col items-center justify-center gap-3">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                {photo ? <img src={photo} /> : <img src={userPic} />}
+                {photo ? (
+                  <img src={photo} alt="user image" />
+                ) : (
+                  <img src={userPic} alt="user image" />
+                )}
               </div>
             </label>
             {name && <p className="text-white"> {name} </p>}
@@ -188,7 +192,11 @@ const NavBar = () => {
       <div className="hidden xl:flex xl:flex-row items-center justify-center gap-3">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            {photo ? <img src={photo} /> : <img src={userPic} />}
+            {photo ? (
+              <img src={photo} alt="user image" />
+            ) : (
+              <img src={userPic} alt="user image" />
+            )}
           </div>
         </label>
         {name && <p className="text-white"> {name} </p>}
